@@ -1,3 +1,8 @@
+/*
+MADE BY YAPAC
+*/
+
+//Text animation
 function Anim(title,text,className) 
 {
 
