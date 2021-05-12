@@ -17,8 +17,42 @@
   </style>
 </head>
 <body>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '277096397251943',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v10.0'
+          });
+          function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+            }
+            
+        };
+        function statusChangeCallback(response) 
+        {
+            if(response.status=="connected")
+            console.log("Connected!");
+            else
+            console.log("Not Connected :(");
+        }
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
 <div class="parallax">
   <div class="jumbotron text-center parallax-inner" style="margin-bottom:0; background: none;">
+    <fb:login-button 
+    scope="public_profile,name"
+    onlogin="checkLoginState();">
+    </fb:login-button>
     <h1 class="title">The Eye-Curious</h1>
     <p class="textUnder">Learn how to catch a user eye!</p> 
   </div>
