@@ -17,36 +17,6 @@
   </style>
 </head>
 <body>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '277096397251943',
-            cookie     : true,
-            xfbml      : true,
-            version    : 'v10.0'
-          });
-          function checkLoginState() {
-            FB.getLoginStatus(function(response) {
-                statusChangeCallback(response);
-            });
-            }
-            
-        };
-        function statusChangeCallback(response) 
-        {
-            if(response.status=="connected")
-            console.log("Connected!");
-            else
-            console.log("Not Connected :(");
-        }
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "https://connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
 <div class="parallax">
   <div class="jumbotron text-center parallax-inner" style="margin-bottom:0; background: none;">
     <h1 class="title">The Eye-Curious</h1>
@@ -86,10 +56,6 @@
 
 <div class="container " style="margin-top: 80px;">
 
-  <!-- Portfolio Item Heading -->
-
-  
-  <!-- Portfolio Item Row -->
   <div class="row">
 
     <div class="col-md-8 " id="eyeContainer">
@@ -104,10 +70,6 @@
         When coming up with a website for your business, make sure that it enhances your brand and complements 
         the type of products and/or services you have to offer. See our list below for ideas, or use our eye-catching 
         business program.</p>
-          <fb:login-button 
-    scope="public_profile,name"
-    onlogin="checkLoginState();">
-    </fb:login-button>
         <a href="#" class="btn btn-primary px-5">Start now</a>
 
         <a href="#" class="btn btn-outline-primary">Contact us</a>
