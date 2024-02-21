@@ -19,7 +19,7 @@ function Anim(title,text,className)
 
 Anim(document.querySelector(".title"),"The Eye-Curious","toInvi");
 Anim(document.querySelector(".textUnder"),"Learn how to catch a user eye!","toInvi")
-Anim(document.querySelector(".UnderTitle"),"What make a website catching","toInvi")
+Anim(document.querySelector(".UnderTitle"),"What is a website catching","toInvi")
 
 
 //eyes animation
